@@ -13,7 +13,7 @@ public class touchscript : MonoBehaviour
         if(!_ps)
             _ps = GetComponent<ParticleSystem>();
         
-        if(_audioSource)
+        if(!_audioSource)
             _audioSource = FindObjectOfType<AudioSource>();
         
         if(!_coinTouchedClip)
