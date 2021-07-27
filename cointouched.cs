@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class touchscript : MonoBehaviour
 {
-    const int MAXSCORE = 200;
+    private int _maxScore = 200;
     private int score;
     private ParticleSystem _ps;
     private AudioSource _audioSource;
@@ -37,7 +37,7 @@ public class touchscript : MonoBehaviour
     private void IncreaseScore(int points)
     {
         score += points;
-        score = score > MAXSCORE ? MAXSCORE : score;
+        _maxScore = score > _maxScore ? score : _maxScore;
     }
 
     private void EnableEffectsCoinTouched()
